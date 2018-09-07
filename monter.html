@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+
+        function touchDown(event) {
+          var touche = window.event ? event.keyCode : event.which;
+          if (touche==38) {
+            var touch = document.getElementById('carre');
+            touch.style.margin = "140px";
+
+          }
+
+        }
+        function touchUp(event) {
+          var touche = window.event ? event.keyCode : event.which;
+          if (touche == 38 ) {
+            var touch = document.getElementById('carre');
+            touch.style.margin = "340px";
+            touch.style.transition ="2s";
+          }
+
+        }
+        //code webkit
+
+
+   </script>
+
+    </script>
+    <style media="screen">
+    #carre {
+          width:100px;
+          height:100px;
+          background:#f0f;
+          margin:340px auto;
+
+
+          }
+    </style>
+  </head>
+  <body onkeydown="touchDown(event)" onkeyup="touchUp(event)">
+    <center>
+      <div id="carre">
+      </div>
+    </center>
+  </body>
+</html>
